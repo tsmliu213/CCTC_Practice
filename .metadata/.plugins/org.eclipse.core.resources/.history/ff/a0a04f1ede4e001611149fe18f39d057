@@ -12,7 +12,6 @@ public class Array_and_strings {
 		System.out.println(isAnagram("hello", "lleoh"));
 		System.out.println(isAnagram("hello", "test"));
 		System.out.println(reverse("hello world"));
-		System.out.println(reverse2("hello world"));
 	}
 	
 	// Implement an algorithm to determine if a string has all unique characters 
@@ -42,25 +41,14 @@ public class Array_and_strings {
 	private String reverse(String str) {
 		StringBuilder sb = new StringBuilder();
 		char[] strAsChar = str.toCharArray();
-		int len = str.length() - 1;
-		for(int i = 0; i <= len; i++) {
+		int len = str.length();
+		for(int i = 0; i < len; i++) {
 			int pos = len - i;
 			sb.append(strAsChar[pos]);
 		}
 		String reversedString = sb.toString();
+		
 		return reversedString;
-	}
-	
-	private String reverse2(String str) {
-		int len = str.length();
-		int end = len -1;
-		char[] strArray = str.toCharArray();
-		for(int i = 0; i < len/2; i ++) {
-			char temp = strArray[i];
-			strArray[i] = strArray[end-i];
-			strArray[end-i] = temp;
-		}
-		return new String(strArray);
 	}
 	
 }
