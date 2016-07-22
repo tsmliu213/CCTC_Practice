@@ -15,7 +15,6 @@ public class Array_and_strings {
 		System.out.println(isAnagram("hello", "test"));
 		System.out.println(reverse("hello world"));
 		System.out.println(reverse2("hello world"));
-		System.out.println(sumFile("numbers.txt"));
 	}
 	
 	// Implement an algorithm to determine if a string has all unique characters 
@@ -67,21 +66,18 @@ public class Array_and_strings {
 	}
 	
 	private int sumFile(String file) {
-		int sum = 0;
 		try {
 			FileReader fr = new FileReader(file);
-			BufferedReader br = new BufferedReader(fr);		
-			for(String num = br.readLine(); num != null; num = br.readLine()) {
-				sum += Integer.parseInt(num);
-			}
+			BufferedReader br = new BufferedReader(fr);
 			
-			br.close();
-			return sum;	
+			int sum = 0;
+			
+			return sum;
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		return sum;
 	}
 	
 }

@@ -74,7 +74,6 @@ public class Array_and_strings {
 			for(String num = br.readLine(); num != null; num = br.readLine()) {
 				sum += Integer.parseInt(num);
 			}
-			
 			br.close();
 			return sum;	
 		}
