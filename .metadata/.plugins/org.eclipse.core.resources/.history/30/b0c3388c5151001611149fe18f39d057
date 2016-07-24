@@ -31,7 +31,7 @@ public class Trees_and_graphs {
 			return root;
 		}
 		else {
-			return search(value < root.getValue() ? root.getLeft() : root.getRight(), value);
+			return value < root.getValue() ? root.getLeft() : root.getRight();
 		}
 	}
 }

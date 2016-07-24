@@ -21,17 +21,11 @@ public class Trees_and_graphs {
 	}
 	
 	public boolean isBalanced(TN root) {
+		if(root == null) {
+			return false;
+		}
 		int minHeight = minHeight(root);
 		int height = height(root);
 		return (height - minHeight) < 2;
-	}
-	
-	public TN search(TN root, int value) {
-		if(root == null || root.getValue() == value) {
-			return root;
-		}
-		else {
-			return search(value < root.getValue() ? root.getLeft() : root.getRight(), value);
-		}
 	}
 }
