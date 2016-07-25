@@ -54,10 +54,7 @@ public class Trees_and_graphs {
 		findSum(head.getRight(), sum, b2, level + 1);
 	}
 	
-	public void print(ArrayList<Integer> buffer, int p, int level) {
-		for(int i = p; i < level; i++) {
-			System.out.print(buffer.get(i) + " ");
-		}
-		System.out.println();
+	public void print(ArrayList<Integer> buffer, int i, int level) {
+		
 	}
 }

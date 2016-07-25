@@ -55,9 +55,8 @@ public class Trees_and_graphs {
 	}
 	
 	public void print(ArrayList<Integer> buffer, int p, int level) {
-		for(int i = p; i < level; i++) {
+		for(int i = p; i < level, i++) {
 			System.out.print(buffer.get(i) + " ");
 		}
-		System.out.println();
 	}
 }
