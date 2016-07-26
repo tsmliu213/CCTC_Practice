@@ -13,8 +13,8 @@ public class Linked_lists {
 	EXAMPLE
 	Input: (3 -> 1 -> 5) + (5 -> 9 -> 2)
 	Output: 8 -> 0 -> 8
-	*/
-	private LN addList(LN node1, LN node2, int carry) {
+	 */
+	LN addList(LN node1, LN node2, int carry) {
 		if(node1 == null && node2 == null) {
 			return null;
 		}
@@ -31,10 +31,10 @@ public class Linked_lists {
 		result.setNext(more);
 		return result;
 	}
-	 
-	// Implement an algorithm to find the n-th last element of a singly linked list
-	// Simple solution using 1 pointer to the head of the list
-	private LN nthToLast(LN list, int index) {
+	
+	/* Implement an algorithm to find the n-th last element of a singly linked list
+	 */
+	LN getNthElement(LN list, int index) {
 		int len = 0;
 		LN head = list;
 		while(list.getNext() != null) {
@@ -47,25 +47,5 @@ public class Linked_lists {
 			head = list.getNext();
 		}
 		return head;
-	}
-	
-	// Better solution utilizing the space between two pointers.
-	private LN nthToLast2(LN list, int index) {
-		if(list == null || index < 1) {
-			return null;
-		}
-		LN p1 = list;
-		LN p2 = list;
-		for(int i = 0; i < index - 1; i++) {
-			if(p2.getNext() == null) {
-				return null;
-			}
-			p2 = p2.getNext();
-		}
-		while(p2 != null) {
-			p1 = p1.getNext();
-			p2 = p2.getNext();
-		}
-		return p1;
 	}
 }
