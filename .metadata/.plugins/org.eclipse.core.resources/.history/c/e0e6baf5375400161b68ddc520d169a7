@@ -21,15 +21,11 @@ public class Trees_and_graphs {
 		return 1 + Math.min(minHeight(root.getLeft()), minHeight(root.getRight()));
 	}
 	
-	
-	// Implement a function to check if a tree is balanced. A balanced tree is a tree
-	// such that no two leaf nodes differ in a distance from the root by more than one.
 	public boolean isBalanced(TN root) {
 		int minHeight = minHeight(root);
 		int height = height(root);
 		return (height - minHeight) < 2;
 	}
-	
 	
 	public TN search(TN root, int value) {
 		if(root == null || root.getValue() == value) {

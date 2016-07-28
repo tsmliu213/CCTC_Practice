@@ -32,6 +32,7 @@ public class TN {
 		this.right = right;
 	}
 	
+
 	public int getValue() {
 		return this.value;
 	}

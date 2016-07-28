@@ -16,25 +16,15 @@ public class TN {
 		this.right = null;
 	}
 	
-	public TN getLeft() {
-		return this.left;
-	}
-	
 	public TN getRight() {
 		return this.right;
 	}
 	
-	public void setLeft(TN left) {
-		this.left = left;
-	}
-	
-	public void setRight(TN right) {
-		this.right = right;
+	public TN getLeft() {
+		return this.left;
 	}
 	
 	public int getValue() {
 		return this.value;
 	}
-	
-	
 }

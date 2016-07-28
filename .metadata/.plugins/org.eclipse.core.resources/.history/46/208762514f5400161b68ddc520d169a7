@@ -30,6 +30,15 @@ public class Trees_and_graphs {
 		return (height - minHeight) < 2;
 	}
 	
+	// Given a directed graph, design an algorithm to find out whether there is a route 
+	// between two nodes.
+	public boolean routeExists(TN nodeStart, TN nodeEnd, ArrayList<TN> visited, Queue<TN> toVisit) {
+		if(toVisit.contains(nodeEnd)) {
+			return true;
+		}
+		
+		return false;
+	}
 	
 	public TN search(TN root, int value) {
 		if(root == null || root.getValue() == value) {

@@ -31,6 +31,11 @@ public class Trees_and_graphs {
 	}
 	
 	
+	// 
+	public boolean routeExists(TN node) {
+		
+	}
+	
 	public TN search(TN root, int value) {
 		if(root == null || root.getValue() == value) {
 			return root;

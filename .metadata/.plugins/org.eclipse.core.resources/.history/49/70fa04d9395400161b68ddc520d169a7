@@ -30,6 +30,10 @@ public class Trees_and_graphs {
 		return (height - minHeight) < 2;
 	}
 	
+	//  
+	public boolean routeExists(TN node) {
+		
+	}
 	
 	public TN search(TN root, int value) {
 		if(root == null || root.getValue() == value) {

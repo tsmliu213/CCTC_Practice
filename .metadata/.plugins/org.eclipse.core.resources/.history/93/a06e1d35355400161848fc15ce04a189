@@ -21,15 +21,11 @@ public class Trees_and_graphs {
 		return 1 + Math.min(minHeight(root.getLeft()), minHeight(root.getRight()));
 	}
 	
-	
-	// Implement a function to check if a tree is balanced. A balanced tree is a tree
-	// such that no two leaf nodes differ in a distance from the root by more than one.
 	public boolean isBalanced(TN root) {
 		int minHeight = minHeight(root);
 		int height = height(root);
 		return (height - minHeight) < 2;
 	}
-	
 	
 	public TN search(TN root, int value) {
 		if(root == null || root.getValue() == value) {
@@ -63,19 +59,5 @@ public class Trees_and_graphs {
 			System.out.print(buffer.get(i) + " ");
 		}
 		System.out.println();
-	}
-	
-	// Given a sorted (increasing order) array, write an algorithm 
-	// to create a binary tree with minimal height.
-	public TN minBinaryTree(int[] array, int start, int end) {
-		if(end > start) {
-			return null;
-		}
-		int mid = (start + end)/2;
-		TN root = new TN(array[mid]);
-		root.setLeft(minBinaryTree(array, start, mid-1));
-		root.setRight(minBinaryTree(array, mid+1, end));
-		
-		return root;
 	}
 }
