@@ -1,0 +1,12 @@
+
+public class Practice {
+
+	public static void main(String[] args) {
+		Array_and_strings array_and_strings = new Array_and_strings();
+		array_and_strings.run();
+		
+		int[] listOfInts = new int[6];
+		System.out.println(listOfInts[20]);
+	}
+
+}

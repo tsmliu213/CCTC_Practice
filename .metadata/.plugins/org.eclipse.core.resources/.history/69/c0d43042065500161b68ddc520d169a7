@@ -80,18 +80,5 @@ public class Linked_lists {
 		return next;
 	}
 	
-	// Reverse a linked list iteratively
-	private LN reverse_i(LN node) {
-		LN prev = null;
-		LN next;
-		while(node.getNext() != null) {
-			next = node.getNext();
-			node.setNext(prev);
-			prev = node;
-			node = next;
-		}
-		return node;
-	}
-	
 	
 }

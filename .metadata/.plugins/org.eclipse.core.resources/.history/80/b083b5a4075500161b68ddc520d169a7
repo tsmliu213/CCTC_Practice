@@ -87,7 +87,6 @@ public class Linked_lists {
 		while(node.getNext() != null) {
 			next = node.getNext();
 			node.setNext(prev);
-			prev = node;
 			node = next;
 		}
 		return node;

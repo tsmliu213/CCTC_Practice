@@ -4,7 +4,7 @@ public class LN {
 	private int value;
 	
 	LN(int value) {
-		this.value = value;
+		
 	}
 	
 	public int getValue() {

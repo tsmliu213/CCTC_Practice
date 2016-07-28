@@ -85,10 +85,11 @@ public class Linked_lists {
 		LN prev = null;
 		LN next;
 		while(node.getNext() != null) {
-			next = node.getNext();
-			node.setNext(prev);
 			prev = node;
-			node = next;
+			node = node.getNext();
+			node.setNext(prev);
+			prev.setNext(null);
+			
 		}
 		return node;
 	}
