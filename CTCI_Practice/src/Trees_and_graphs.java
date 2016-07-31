@@ -78,4 +78,35 @@ public class Trees_and_graphs {
 		
 		return root;
 	}
+
+	// Given a binary search tree, design an algorithm which creates a linked list of 
+	// all the nodes at each depth (eg, if you have a tree with depth D, you’ll 
+	// have D linked lists).
+	public ArrayList<LinkedList<TN>> findLevelLinkedList(TN root) {
+		ArrayList<LinkedList<TN>> linkedLists = new ArrayList<LinkedList<TN>>();
+		int level = 0;
+		LinkedList linkedList = new LinkedList();
+		linkedList.add(root);
+		linkedLists.add(linkedList);
+		while(true) {
+			linkedList = new LinkedList();
+			for(TN node : linkedLists.get(level)) {
+				if(node.getLeft() != null) {
+					linkedList.add(node.getLeft());
+				}
+				if(node.getRight() != null) {
+					linkedList.add(node.getRight());
+				}
+			}
+			if(linkedList.isEmpty()){
+				break;
+			}
+			linkedLists.add(linkedList);
+			level++;
+		}
+		return levels;
+	}
+
+
+
 }
