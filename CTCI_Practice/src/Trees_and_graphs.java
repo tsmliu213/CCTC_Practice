@@ -85,11 +85,11 @@ public class Trees_and_graphs {
 	public ArrayList<LinkedList<TN>> findLevelLinkedList(TN root) {
 		ArrayList<LinkedList<TN>> linkedLists = new ArrayList<LinkedList<TN>>();
 		int level = 0;
-		LinkedList linkedList = new LinkedList();
+		LinkedList<TN> linkedList = new LinkedList<TN>();
 		linkedList.add(root);
 		linkedLists.add(linkedList);
 		while(true) {
-			linkedList = new LinkedList();
+			linkedList = new LinkedList<TN>();
 			for(TN node : linkedLists.get(level)) {
 				if(node.getLeft() != null) {
 					linkedList.add(node.getLeft());
@@ -104,7 +104,7 @@ public class Trees_and_graphs {
 			linkedLists.add(linkedList);
 			level++;
 		}
-		return levels;
+		return linkedLists;
 	}
 
 
