@@ -1,4 +1,7 @@
 import java.awt.List;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -37,9 +40,18 @@ public class WordCounter {
 				return Integer.compare(wordCounts.get(word1), wordCounts.get(word2));
 			}
 		}.reversed());
-		for(String word: words) {
-			int count = wordCounts.get(word);
-			System.out.printf("%-20s %d\n", word, count);
+		try {
+			File file = new File("output.txt");
+			BufferedWriter output = new BufferedWriter(new FileWriter(file));
+			for(String word: words) {
+				int count = wordCounts.get(word);
+				//System.out.printf("%-20s %d\n", word, count);
+				output.write(String.format("%-20s %d\n", word, count));
+			}
+			output.close();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 }
