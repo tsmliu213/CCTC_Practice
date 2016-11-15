@@ -2,11 +2,11 @@ import java.io.*;
 import java.util.*;
 
 /*
- * To execute Java, please define "static void main" on a class
- * named Solution.
- *
- * If you need more classes, simply define them inline.
- */
+Possible improvements:
+    - Look for a more effiecient way/ or data structure to find differences in the count of words.
+    - Add exception catching to handle errors more gracefully.
+    - Write more tests for corner cases.
+*/
 
 class Solution {
     public static HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
