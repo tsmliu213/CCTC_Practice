@@ -3,7 +3,7 @@ import java.util.*;
 
 /*
 Possible improvements:
-    - Look for a more effiecient way/ or data structure to find differences in the count of words.
+    - Look for a more efficient way/ or data structure to find differences in the count of words.
     - Add exception catching to handle errors more gracefully.
     - Write more tests for corner cases.
 */
